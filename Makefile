@@ -10,7 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-SRC_DIR = .
 
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 	ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c \
@@ -24,31 +23,29 @@ SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lst
 	ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c\
 
 
-NAME = libft.a
-LIBC = ar -rcs
+NAME = libft.a 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 OBJS_ALL = $(OBJS) $(OBJS_BONUS)
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 RM = rm -f
-INCS = .
 so = libft.so
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) -I $(INCS)
+all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(LIBC) $(NAME) $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
 bonus: $(OBJS_ALL)
-	$(LIBC) $(NAME) $(OBJS_ALL)
+	ar -rc $(NAME) $(OBJS_ALL)
+
+.c.o:
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) 
 
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS) $(SRCS_BONUS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS_ALL)
-
-all: $(NAME)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)

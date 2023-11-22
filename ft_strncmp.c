@@ -24,19 +24,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     const char *str1 = "Hello, world!";
-//     const char *str2 = "Hello, there!";
-//     size_t n = 3;
-
-//     int result_custom = ft_strncmp(str1, str2, n);
-//     int result_standard = strncmp(str1, str2, n);
-
-//     printf("Custom strncmp: %d\n", result_custom);
-//     printf("Standard strncmp: %d\n", result_standard);
-
-//     return 0;
-// }

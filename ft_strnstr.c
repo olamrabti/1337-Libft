@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 17:45:17 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/11 18:58:27 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/22 20:05:06 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ static char	*ft_check(const char *haystack, const char *needle, size_t len)
 {
 	size_t	temp;
 
-	if (!ft_strlen(needle))
-		return ((void *)haystack);
+	if (!*needle)
+		return ((char *)haystack);
 	temp = (size_t)(ft_strchr(haystack, *needle) - haystack);
 	if (ft_strlen(needle) == 1 && temp < len)
 		return (ft_strchr(haystack, needle[0]));
@@ -32,9 +32,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	j = 0;
 	temp = len;
-	if (!haystack && !len)
+	if (!haystack && !len && needle)
 		return (NULL);
-	if (ft_strlen(needle) == 1 || !ft_strlen(needle))
+	if (!*needle || ft_strlen(needle) == 1)
 		return (ft_check(haystack, needle, len));
 	while (haystack[j] && len)
 	{

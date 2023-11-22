@@ -6,12 +6,11 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:37:17 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/10 12:33:11 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:13:59 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*put_str(int n, char *str, int count)
 {

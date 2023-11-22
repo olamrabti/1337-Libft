@@ -34,16 +34,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	return (total_len);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char src[] = "Helloooo";
-// 	char dest[12] = "World";
-// 	//size_t size = 4;
-// 	printf("%zu\n", ft_strlcat(dest, src, 5));
-// 	printf("%zu\n", strlcat(dest, src, 5));
-// 	printf("%s\n", dest);
-// 	return (0);
-// }

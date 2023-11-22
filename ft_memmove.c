@@ -35,17 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// int main() {
-//     char source[] = "Hello, World!";
-//     char destination[20];
-
-//     // Using my_memmove to copy data with overlap
-//     ft_memmove(destination, source, 13);
-
-//     printf("Source: %s\n", source);
-//     printf("Destination: %s\n", destination);
-
-//     return 0;
-// }

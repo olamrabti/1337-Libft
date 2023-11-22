@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 19:32:12 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/13 18:25:26 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/20 13:08:57 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = tmp;
 	}
+	lst = NULL;
 }

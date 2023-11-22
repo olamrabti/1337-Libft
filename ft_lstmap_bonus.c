@@ -6,13 +6,12 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 19:36:34 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/16 18:21:41 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:24:45 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// still doesnt work >...........
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*temp;

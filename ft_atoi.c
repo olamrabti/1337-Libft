@@ -6,13 +6,11 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:51:28 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/16 18:04:28 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/20 10:36:30 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stdio.h>
 
 static int	ft_check_flow(int sign)
 {
@@ -24,8 +22,8 @@ static int	ft_check_flow(int sign)
 
 int	ft_atoi(const char *str)
 {
-	long	num;
-	int		sign;
+	unsigned long long	num;
+	int					sign;
 
 	num = 0;
 	sign = 1;
@@ -41,7 +39,7 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		if ((unsigned long long)(num * 10 + *str - 48) > 9223372036854775808ULL)
+		if (num > (9223372036854775807ULL - (*str - '0')) / 10)
 			return (ft_check_flow(sign));
 		num = num * 10 + *str - 48;
 		str++;

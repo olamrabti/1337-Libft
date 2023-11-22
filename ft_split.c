@@ -6,12 +6,11 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 11:52:18 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/10 14:21:32 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/19 16:51:43 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	count_words(char const *s, char c)
 {
@@ -29,9 +28,7 @@ static size_t	count_words(char const *s, char c)
 				i++;
 		}
 		else
-		{
 			i++;
-		}
 	}
 	return (count);
 }
@@ -68,7 +65,7 @@ static char	**str_split(char const *s, char c, size_t i, size_t len)
 		j++;
 	}
 	copy[j] = NULL;
-	return (&*copy);
+	return (copy);
 }
 
 char	**ft_split(char const *s, char c)
@@ -82,30 +79,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (str_split(s, c, i, len));
 }
-
-// void l()
-// {
-// 	system("leaks a.out");
-// }
-
-// int main()
-// {
-	// atexit(l);
-// 	size_t i = 0;
-// 	char *string = "      split       this for   me  !       ";
-// 	char **result = ft_split(string, ' ');
-// 	while (result[i])
-// 	{
-// 		printf("result is -%s-\n", result[i]);
-// 		free(result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// }
-
-// Description :
-
-/* Allocates (with malloc(3)) and returns an array
-of strings obtained by splitting ’s’ using the
-character ’c’ as a delimiter. The array must end
-with a NULL pointer. */

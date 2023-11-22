@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:31:13 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/09 20:26:29 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:46:13 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	copy[i] = '\0';
 	return (copy);
 }
-
-// Description
-// Applies the function ’f’ to each character of the
-// string ’s’, and passing its index as first argument
-// to create a new string (with malloc(3)) resulting
-// from successive applications of ’f’.

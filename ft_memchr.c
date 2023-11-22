@@ -21,12 +21,10 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	i = 0;
 	if (!n && !c)
 		return (NULL);
-	if (!c && !n)
-		return ((void *)s + ft_strlen(str));
 	while (i < n)
 	{
 		if (s[i] == (unsigned char)c)
-			return ((void *)s + i);
+			return (s + i);
 		i++;
 	}
 	return (NULL);

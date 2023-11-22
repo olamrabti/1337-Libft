@@ -28,9 +28,9 @@ OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 OBJS_ALL = $(OBJS) $(OBJS_BONUS)
 CC = cc
+HEADER = libft.h
 FLAGS = -Wall -Werror -Wextra
 RM = rm -f
-so = libft.so
 
 all: $(NAME)
 
@@ -40,18 +40,18 @@ $(NAME): $(OBJS)
 bonus: $(OBJS_ALL)
 	ar -rc $(NAME) $(OBJS_ALL)
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) 
-
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS_ALL)
+%.o: %.c $(HEADER) 
+	$(CC) $(FLAGS) -c $<
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	$(RM) $(bonus) $(NAME) $(so)
+	$(RM) $(bonus) $(NAME)
 
-re: fclean all bonus
+re: fclean all
+
+re_bonus: fclean bonus
+
+.PHONY: fclean clean bonus all re re_bonus
 

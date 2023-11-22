@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:05:00 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/10 12:33:47 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:43:02 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_count_set(char const *s1, char const *set)
 {
-	int	size;
-	int	i;
+	size_t	size;
+	size_t	i;
 
 	size = ft_strlen(s1);
 	i = 0;

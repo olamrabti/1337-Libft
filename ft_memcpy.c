@@ -22,22 +22,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
 	while (n--)
-	{
 		*d++ = *s++;
-	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     char source[] = "Hello, World!";
-//     char destination[20];
-
-//     ft_memcpy(destination, source, 13);
-
-//     printf("Source: %s\n", source);
-//     printf("Destination: %s\n", destination);
-
-//     return 0;
-// }

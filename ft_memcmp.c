@@ -22,34 +22,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n--)
 	{
 		if (*a != *b)
-		{
 			return (*a - *b);
-		}
 		a++;
 		b++;
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     const char *str1 = "Hello, World!";
-//     const char *str2 = "Hello, Universe!";
-//     size_t n = 6; // Number of bytes to compare
-
-//     int result = ft_memcmp(str1, str2, n);
-
-//     if (result == 0) {
-//         printf("The first %zu bytes of both strings are equal.\n", n);
-// //     } else if (result < 0) {
-// //         printf("The first %zu bytes of str1
-// are lexicographically less than str2.\n", n);
-// //     } else {
-// //         printf("The first %zu bytes of str1
-// are lexicographically greater than str2.\n", n);
-// //     }
-
-// //     return 0;
-// // }

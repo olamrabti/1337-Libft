@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:45:09 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/09 20:20:34 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/22 15:40:52 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	nbr;
+	unsigned long long	nbr;
 
 	nbr = n;
+	if (fd < 0)
+		return ;
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
@@ -30,10 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(nbr + '0', fd);
 }
-/*
-int main()
-{
-	 ft_putnbr_fd(-5456465, 1);
-	 return 0;
-}
-*/

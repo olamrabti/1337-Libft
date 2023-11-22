@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 13:52:50 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/11 12:01:42 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:43:30 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *str, int c)
 		str++;
 		count++;
 	}
-	while (count--)
+	while (count--) 
 	{
 		if (*str == (char)c)
 			return ((char *)str);

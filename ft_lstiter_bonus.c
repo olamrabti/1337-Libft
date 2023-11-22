@@ -6,7 +6,7 @@
 /*   By: olamrabt <olamrabt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 19:34:16 by olamrabt          #+#    #+#             */
-/*   Updated: 2023/11/11 19:36:13 by olamrabt         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:44:22 by olamrabt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-//remember to update all bonus func , u know the header!

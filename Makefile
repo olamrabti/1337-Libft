@@ -35,10 +35,10 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
+	ar -rc $(NAME) $^
 
 bonus: $(OBJS_ALL)
-	ar -rc $(NAME) $(OBJS_ALL)
+	ar -rc $(NAME) $^
 
 %.o: %.c $(HEADER) 
 	$(CC) $(FLAGS) -c $<
@@ -47,7 +47,7 @@ clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	$(RM) $(bonus) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
